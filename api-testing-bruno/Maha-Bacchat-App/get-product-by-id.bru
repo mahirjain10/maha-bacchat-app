@@ -1,0 +1,21 @@
+meta {
+  name: get-product-by-id
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:8000/get-product-by-id-distributor
+  body: json
+  auth: none
+}
+
+headers {
+  Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjgzMDY0YzNmZjU1MGVmNTczYTAwMmUiLCJleHAiOjE3MjAxMDYzNjJ9.Dci2ryHgiLcVTwuJxaiGaSRED13Yb1edwIecqgU4Fio
+}
+
+body:json {
+  {
+    "product_id":"66869e1c3ded002d315a0570"
+  }
+}

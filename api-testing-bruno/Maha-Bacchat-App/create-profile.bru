@@ -1,0 +1,20 @@
+meta {
+  name: create-profile
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8000/create-profile
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Temp Kumar",
+    "store_name":"Temp Kumar Tea stall",
+    "address":"temp kumar kholi number 12",
+    "user_id":"6674438bfbde95ff6b2f33cd"
+  }
+}

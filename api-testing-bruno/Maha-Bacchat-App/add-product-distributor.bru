@@ -1,0 +1,26 @@
+meta {
+  name: add-product-distributor
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8000/add-product-distributor
+  body: json
+  auth: inherit
+}
+
+headers {
+  Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjgzMDY0YzNmZjU1MGVmNTczYTAwMmUiLCJleHAiOjE3MjAxMDAxMjJ9.JDgm4FtK3HrUkXpyZDKCV43csqpq0RHRoUmHxmxNaPQ
+}
+
+body:json {
+  {
+    "product_name":"fried fifty 50gm",
+    "mrp":60,
+    "cost":90,
+    "avail_qty":10,
+    "remain_qty":10,
+    "min_qty":5
+  }
+}

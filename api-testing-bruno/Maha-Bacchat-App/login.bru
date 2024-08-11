@@ -1,0 +1,22 @@
+meta {
+  name: login
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8000/login
+  body: json
+  auth: none
+}
+
+headers {
+  Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjgzMDY0YzNmZjU1MGVmNTczYTAwMmUiLCJleHAiOjE3MTk4NjQ2NjB9.PJnZ37hGY6dw0bVahl4TkumvSJcrHHPthYHHY2eHY6Y
+}
+
+body:json {
+  {
+    "email":"testdist@gmail.com",
+    "password":"testdist30"
+  }
+}

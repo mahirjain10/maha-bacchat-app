@@ -1,0 +1,27 @@
+meta {
+  name: edit-product-distributor
+  type: http
+  seq: 6
+}
+
+patch {
+  url: http://localhost:8000/edit-product-distributor
+  body: json
+  auth: none
+}
+
+headers {
+  Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjgzMDY0YzNmZjU1MGVmNTczYTAwMmUiLCJleHAiOjE3MjAxMDAxMjJ9.JDgm4FtK3HrUkXpyZDKCV43csqpq0RHRoUmHxmxNaPQ
+}
+
+body:json {
+  {
+    "product_id":"66869e1c3ded002d315a0570",
+    "product_name":"changed product",
+    "mrp":60,
+    "cost":99,
+    "avail_qty":10,
+    "remain_qty":10,
+    "min_qty":5
+  }
+}

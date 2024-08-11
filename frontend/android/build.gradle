@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.0' // Adjust to the version you are using
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21" // Adjust to the version you are using
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    // Set the build directory relative to the root project
+    rootProject.buildDir = "../build"
+
+    // Configure build directory for each subproject/module
+    subprojects {
+        project.buildDir = "${rootProject.buildDir}/${project.name}"
+    }
+
+    // Ensure ':app' is evaluated when building
+    subprojects {
+        project.evaluationDependsOn(":app")
+    }
+}
+
+// Define a custom 'clean' task to delete the build directory
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

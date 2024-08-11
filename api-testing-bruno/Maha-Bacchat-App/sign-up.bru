@@ -1,0 +1,20 @@
+meta {
+  name: sign-up
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://192.168.23.128:8000/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "testdist@gmail.com",
+    "password": "testdist30",
+    "mobile_no": "9152077168",
+    "role":"distributor"
+  }
+}
